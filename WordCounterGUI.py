@@ -21,6 +21,9 @@ string=''
 def black():
     print('black')
 
+def test():
+    print('this is insignificant')
+
 def chooseFile():
     global string
     global fileChosen
