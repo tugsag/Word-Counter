@@ -19,6 +19,9 @@ string=''
 ## Functions
 ##---------------
 
+def test():
+    print('this is insignificant')
+
 def chooseFile():
     global string
     global fileChosen
