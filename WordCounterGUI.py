@@ -18,6 +18,8 @@ string=''
 
 ## Functions
 ##---------------
+def black():
+    print('black')
 
 def chooseFile():
     global string
@@ -71,7 +73,7 @@ def chooseFile():
 def charcountDisp():
     if fileChosen==False:
         filedisp["text"] = "Please choose a valid file before continuing."
-    else:  
+    else:
         cc = len(string)
         ccdisp["text"] = "Character Count: " + str(cc)
         ##charcountDisp = tk.Label(m, text="Character Count: " + str(cc))
@@ -80,7 +82,7 @@ def charcountDisp():
 def wordcountDisp():
     if fileChosen==False:
         filedisp["text"] = "Please choose a valid file before continuing."
-    else:  
+    else:
         stripped = re.sub(r'[^\w\s]','',string)
         processed = stripped.lower()
         indWords = processed.split()
@@ -92,7 +94,7 @@ def wordcountDisp():
 def uniquewordsDisp():
     if fileChosen==False:
         filedisp["text"] = "Please choose a valid file before continuing."
-    else:  
+    else:
         stripped = re.sub(r'[^\w\s]','',string)
         processed = stripped.lower()
         indWords = processed.split()
@@ -108,7 +110,7 @@ def uniquewordsDisp():
 def charcountwospace():
     if fileChosen==False:
         filedisp["text"] = "Please choose a valid file before continuing."
-    else:  
+    else:
         stripped = re.sub("\s+", "", string)
         ccwsdisp["text"] = "Character Count Without Space: " + str(len(stripped))
         ##ccws = tk.Label(m, text="Character Count Without Space: " + str(len(stripped)))
@@ -117,7 +119,7 @@ def charcountwospace():
 def topTen():
     if fileChosen==False:
         filedisp["text"] = "Please choose a valid file before continuing."
-    else:  
+    else:
         stripped = re.sub(r'[^\w\s]','',string)
         processed = stripped.lower()
         indWords = processed.split()
@@ -128,7 +130,7 @@ def topTen():
         for word in indWords:
             if word not in wordList:
                 wordList.append(word)
-                
+
         for word in wordList:
             numberOfOcc = indWords.count(word)
             countList.append(numberOfOcc)
